@@ -1,0 +1,14 @@
+3f6d3f6706d33558618d8fd02ec8b031 *DESCRIPTION
+fd2d02705b9660de67a04c21915e49a2 *LICENSE
+336f3bbd3b137aed613a8a6807212488 *NAMESPACE
+e03c75c0bc062c71cb4073d114956941 *NEWS.md
+e8085c6b08b1ba06e025dba1ea0f640c *R/uiuc_beamer.R
+069f20dfea98dca2bc97ec8dc669ea92 *R/uiucthemes.R
+302a6d79f9c0441d9b7449e5bc7db895 *R/utils.R
+62a1ea857e4999f97f876e64c3e88555 *README.md
+5ab19e509c63603af8488184b3c1448f *inst/rmarkdown/templates/uiuc_beamer/resources/template.tex
+9e3ec915754ecaef0fd3da97548f9a8e *inst/rmarkdown/templates/uiuc_beamer/skeleton/ilogo.pdf
+b9ee3093a1582f4bd29f95b72acced49 *inst/rmarkdown/templates/uiuc_beamer/skeleton/skeleton.Rmd
+f6e9620e95e6df5f25855390cf2740e0 *inst/rmarkdown/templates/uiuc_beamer/template.yaml
+5e497f1d44d3d47c0cec93a60cd527d8 *man/uiuc_beamer.Rd
+5afd3d91d0a0b07f44388c836258137e *man/uiucthemes-package.Rd
