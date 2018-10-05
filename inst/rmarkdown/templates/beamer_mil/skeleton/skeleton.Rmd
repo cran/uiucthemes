@@ -1,38 +1,42 @@
 ---
-title: "Illinois Blue and Orange Beamer Theme"
-short-title: "Beamer Slides"
-author: "John and Mary Doe"
-short-author: "J & M Doe"
-date: '`r format(Sys.Date(), "%B %d, %Y")`'      # Month DD, YYYY (Main Slide)
-short-date: '`r format(Sys.Date(), "%m/%d/%Y")`' # MM/DD/YYYY (Lower Right)
+title: "Introduction to Bloomberg Professional"
+author: "Margolis Market Information Lab "
+department: "Department of Finance" # Department
 institute: "University of Illinois at Urbana-Champaign"
-short-institute: "UIUC"
-department: "Department of Magic"                # Institute must be defined
-license: "Did you license this slide deck? "
-section-titles: false                            # Provides slide headings
-safe-columns: true                               # Enables special latex macros for columns.
-output: 
-   uiucthemes::beamer_illinois
+date: '`r format(Sys.Date(), "%B %d, %Y")`' # (Main Slide)
+short-title: "BLP101" # (Lower Middle)
+short-author: "Margolis Market Information Lab (MIL)" # (Lower Left)
+short-date: "Gies College of Business"  # (Lower Right)
+license: "Do not duplicate or distribute without permission"  # License
+section-titles: false # Section Slides
+toc: true # Table of content
+safe-columns: true  # Special columns
+output:
+  uiucthemes::beamer_mil
 ---
 
-# Section title     
+# Section title
 ## Subsection title 
 
 ### Frame Title
-
-Frame content 
+Frame content
 
 **Unordered List**
 
+- [Market Information Lab](https://business.illinois.edu/mil/)
+- [Gies College of Business](https://business.illinois.edu/)
 - [University of Illinois at Urbana-Champaign (UIUC)](http://illinois.edu)
-- [Department of Statistics](http://www.stat.illinois.edu/)
-- [Illinois Informatics Institute](http://www.informatics.illinois.edu/)
 
 *Ordered List*
 
-1. <http://thecoatlessprofessor.com>
-2. <https://github.com/coatless>
+1. <https://business.illinois.edu/mil/>
+2. <https://business.illinois.edu/finance/>
 
+# Section title
+## Subsection title 
+
+### Frame Title
+Frame content 
 
 #### Title for block box
 
@@ -67,6 +71,8 @@ must be set equal to `true`.
 1. **Goodbye!**
 
 \endcols
+
+# Section title
 
 ## Code Example
 
