@@ -1,0 +1,21 @@
+Portions of the resource finding functions were taken from the `rmarkdown` package
+by:
+
+JJ Allaire, Yihui Xie, Jonathan McPherson, Javier Luraschi, Kevin Ushey,
+Aron Atkins, Hadley Wickham, Joe Cheng, Winston Chang, and Richard Iannone.
+
+The `imtheme.css` and `fonts-imthemes.css` was based off of the translation to
+`remark.js` of metropolis' `mtheme` by Patrick Schratz.
+
+https://github.com/pat-s/xaringan-metropolis
+
+The `metropolis` beamer theme, formerly `mtheme`, was written primarily by
+Matthias Vogelgesang.
+
+https://github.com/matze/mtheme
+
+The uiucthemes package provides an integration of UIUC-themed documents into
+R. To accomplish this the package provides custom templates that utilize both
+the RMarkdown and xaringan packages. The R implementation was done by James
+Joseph Balamuta with additional contributions by
+contributors listed in the ChangeLog.

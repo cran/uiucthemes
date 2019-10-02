@@ -2,11 +2,19 @@
 #'
 #' Generates from an RMarkdown file a Beamer presentation with "Illinois" (UIUC)
 #' colors and identity standards.
+#'
 #' @inheritParams rmarkdown::beamer_presentation
-#' @return A modified \code{beamer_presentation} based on the "Illinois" (UIUC)
-#'  Beamer themed template.
+#'
+#' @return
+#' A modified `beamer_presentation`  based on the "Illinois" (UIUC)
+#' Beamer themed template.
+#'
 #' @export
-#' @author RStudio RMarkdown Team (Everything) & JJB (Theme hook + Beamer Theme)
+#'
+#' @author
+#' James Joseph Balamuta (Theme Hooks and Beamer Template Modifications)
+#' See AUTHORS for more specific details behind each of the contributions.
+#'
 #' @examples
 #' \dontrun{
 #' # Generate slide deck from beamer template
@@ -16,7 +24,7 @@
 #' rmarkdown::render("slide_deck/slide_deck.Rmd")
 #' }
 beamer_illinois <- function(toc = FALSE,
-                            slide_level = 3,
+                            slide_level = 2,
                             incremental = FALSE,
                             fig_width = 10,
                             fig_height = 7,
@@ -62,12 +70,20 @@ beamer_illinois <- function(toc = FALSE,
 #'
 #' Generates from an RMarkdown file a Beamer presentation with "Illinois" (UIUC)
 #' colors and identity standards with a focus on "Orange" and "White".
+#'
 #' @inheritParams rmarkdown::beamer_presentation
-#' @return A modified \code{beamer_presentation} based on the "Illinois" (UIUC)
-#'  Beamer themed template.
+#'
+#' @return
+#' A modified `beamer_presentation`  based on the "Illinois" (UIUC)
+#' Beamer themed template.
+#'
 #' @export
+#'
 #' @author
-#' RStudio RMarkdown Team (Everything), JJB (Theme hook), Prof. Steven A Culpepper (Beamer Orange Theme)
+#' Prof. Steven A Culpepper (Beamer Orange Theme)
+#' James Joseph Balamuta (Theme Hooks)
+#' See AUTHORS for more specific details behind each of the contributions.
+#'
 #' @examples
 #' \dontrun{
 #' # Generate slide deck from beamer template
@@ -124,12 +140,20 @@ beamer_orange <- function(toc = FALSE,
 #'
 #' Generates from an RMarkdown file a Beamer presentation with "marketlab" (UIUC)
 #' colors and identity standards with a focus on "Orange" and "White".
+#'
 #' @inheritParams rmarkdown::beamer_presentation
-#' @return A modified \code{beamer_presentation} based on the "marketlab" (UIUC)
-#'  Beamer themed template.
+#'
+#' @return
+#' A modified `beamer_presentation`  based on the "marketlab" (UIUC)
+#' Beamer themed template.
+#'
 #' @export
+#'
 #' @author
-#' RStudio RMarkdown Team (Everything), JJB (Theme hook), Jose Luis Rodriguez (Beamer Marketlab Theme)
+#' Jose Luis Rodriguez (Beamer Marketlab Theme)
+#' James Joseph Balamuta (Theme Hooks)
+#' See AUTHORS for more specific details behind each of the contributions.
+#'
 #' @examples
 #' \dontrun{
 #' # Generate slide deck from beamer template
@@ -180,4 +204,79 @@ beamer_mil <- function(toc = FALSE,
                                  pandoc_args = pandoc_args)
 
 }
+
+
+#' Beamer Illinois Metropolis Template for RMarkdown
+#'
+#' Generates from an RMarkdown file a Beamer presentation with "Illinois" (UIUC)
+#' colors and identity standards based on the Metropolis theme.
+#'
+#' @inheritParams rmarkdown::beamer_presentation
+#'
+#' @return
+#' A modified `beamer_presentation` based on the "Illinois" (UIUC)
+#' Beamer themed template.
+#'
+#' @export
+#'
+#' @author
+#' James Joseph Balamuta (Theme Hooks)
+#' See AUTHORS for more specific details behind each of the contributions.
+#'
+#' @examples
+#' \dontrun{
+#' # Generate slide deck from beamer template
+#' rmarkdown::draft("slide_deck.Rmd", template = "beamer_imetropolis", package = "uiucthemes")
+#'
+#' # Compile the document
+#' rmarkdown::render("slide_deck/slide_deck.Rmd")
+#' }
+beamer_imetropolis <- function(toc = FALSE,
+                          slide_level = 3,
+                          incremental = FALSE,
+                          fig_width = 10,
+                          fig_height = 7,
+                          fig_crop = TRUE,
+                          fig_caption = TRUE,
+                          dev = 'pdf',
+                          df_print = "default",
+                          fonttheme = "default",
+                          highlight = "default",
+                          keep_tex = FALSE,
+                          latex_engine = "pdflatex",
+                          citation_package = c("none", "natbib", "biblatex"),
+                          includes = NULL,
+                          md_extensions = NULL,
+                          pandoc_args = NULL){
+
+  template <- find_resource("beamer_imetropolis", "imetropolis.tex")
+
+  load_resources_if_missing("beamer_orange",
+                            c("horizontal-rb-illinois.png",
+                              "horizontal-o-illinois.png"))
+
+  rmarkdown::beamer_presentation(#template = template,
+                                 toc = toc,
+                                 slide_level = slide_level,
+                                 incremental = incremental,
+                                 fig_width = fig_width,
+                                 fig_height = fig_height,
+                                 fig_crop = fig_crop,
+                                 fig_caption = fig_caption,
+                                 theme = "metropolis",
+                                 dev = dev,
+                                 df_print = df_print,
+                                 fonttheme = fonttheme,
+                                 highlight = highlight,
+                                 keep_tex = keep_tex,
+                                 latex_engine = latex_engine,
+                                 citation_package = citation_package,
+                                 includes = rmarkdown::includes(in_header = c(template, includes$in_header),
+                                                     before_body = includes$before_body,
+                                                     after_body = includes$after_body),
+                                 md_extensions = md_extensions,
+                                 pandoc_args = pandoc_args)
+
+}
+
 

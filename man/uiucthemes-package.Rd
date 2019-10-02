@@ -16,9 +16,9 @@ Trial run on RMarkdown templates
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/coatless/uiucthemes}
+  \item \url{https://github.com/illinois-r/uiucthemes}
   \item \url{http://thecoatlessprofessor.com/projects/uiucthemes/}
-  \item Report bugs at \url{https://github.com/coatless/uiucthemes/issues}
+  \item Report bugs at \url{https://github.com/illinois-r/uiucthemes/issues}
 }
 
 }
@@ -29,7 +29,7 @@ Other contributors:
 \itemize{
   \item Steven Andrew Culpepper \email{sculpepp@illinois.edu} (Provided the Minimal Orange Beamer Theme) [contributor]
   \item David Dalpiaz \email{dalpiaz2@illinois.edu} (Collaborated on the LaTeX Journal Theme) [contributor]
-  \item Jose Luis Rodriguez \email{jrodriguezorjuela@luc.edu} (Provided the Market Information Lab (MIL) Beamer Theme) [contributor]
+  \item Jose Luis Rodriguez \email{jlroo@illinois.edu} (Provided the Market Information Lab (MIL) Beamer Theme) [contributor]
 }
 
 }
