@@ -4,6 +4,7 @@
 #' colors and identity standards based on the Metropolis theme.
 #'
 #' @inheritParams xaringan::moon_reader
+#' @param ... Additional parameters passed to [xaringan::moon_reader()].
 #'
 #' @return
 #' A modified [xaringan::moon_reader()] based on the "Illinois" (UIUC)
@@ -29,9 +30,14 @@ html_imetropolis <- function(
   nature = list(), ...
   ) {
 
-  css_resources <- sapply(c("imtheme.css", "fonts-imtheme.css"), function(x) {
-    find_resource("html_imetropolis", x)
-  })
+  css_resources = c("imtheme.css", "fonts-imtheme.css")
+  img_resources = c("horizontal-o-illinois.png", "horizontal-rb-illinois.png")
+
+  load_resources_if_missing("html_imetropolis", c(css_resources, img_resources))
+
+  # css_resources <- sapply(c("imtheme.css", "fonts-imtheme.css"), function(x) {
+  #   find_resource("html_imetropolis", x)
+  # })
 
   xaringan::moon_reader(
       css = c("default", css_resources),
